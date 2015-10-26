@@ -10,13 +10,13 @@
   <nav class="navbar navbar-default navbar-custom">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#"><%= image_tag 'trimet.png' %></a>
+        <%= link_to (image_tag 'trimet.png'), root_path, class: 'navbar-brand' %>
       </div>
       <div>
         <ul class="nav navbar-nav">
           <li><a href="#">Categories</a></li>
         </ul>
-        <span class="center-navbar">Trimet Troubles</span>
+        <div class="center-navbar">Trimet Troubles</div>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to 'Pose A Questsh', new_question_path %></li>
 
@@ -25,7 +25,7 @@
     </div>
   </nav>
 
-<div class='container'>
+<div class='container body-wrapper'>
   <%= flash[:notice]%>
   <%= flash[:alert]%>
   <%= yield %>
