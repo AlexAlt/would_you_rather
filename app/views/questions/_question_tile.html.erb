@@ -1,28 +1,34 @@
 <div class='question-tile'>
   <div class='row'>
     <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12'>
-      <div class='col-lg-5 col-md-5 col-sm-5 col-xs-5 side-by-side-container'>
-        <%= image_tag question.image_one.url(:medium) %>
-        <br>
-        <h5 class='text-center'>
-          <%= question.option_one %>
-        </h5>
+      <%= link_to question_path(question, which: question.option_one), {method: :patch, remote: true} do %>
+        <div class='col-lg-5 col-md-5 col-sm-5 col-xs-5 side-by-side-container'>
+          <%= image_tag question.image_one.url(:medium) %>
+          <br>
+          <h5 class='text-center'>
+            <%= question.option_one %>
+            <span id='<%= question.id %>-option-one-points'><%= question.points_one %></span>
+          </h5>
 
-      </div>
+        </div>
+      <% end %>
       <div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 '>
         <div class='text-center'>
           <h4><span class='glyphicon glyphicon-menu-left'></span> OR
             <span class='glyphicon glyphicon-menu-right'></span></h4>
         </div>
       </div>
-      <div class='col-lg-5 col-md-5 col-sm-5 col-xs-5 side-by-side-container'>
-        <%= image_tag question.image_two.url(:medium) %>
-        <br>
-        <h5 class='text-center'>
-          <%= question.option_two %>
-        </h5>
+      <%= link_to question_path(question, which: question.option_two), method: 'patch', remote: true do %>
+        <div class='col-lg-5 col-md-5 col-sm-5 col-xs-5 side-by-side-container'>
+          <%= image_tag question.image_two.url(:medium) %>
+          <br>
+          <h5 class='text-center'>
+            <%= question.option_two %>
+            <span id='<%= question.id %>-option-two-points'><%= question.points_two %></span>
+          </h5>
 
-      </div>
+        </div>
+      <% end %>
 
     </div>
 

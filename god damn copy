@@ -1,0 +1,1 @@
+  // $('#<%= @question.id %>-option-<%= @option %>-points').val('<%= @question.points_@option %>');
