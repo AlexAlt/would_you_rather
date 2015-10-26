@@ -22,13 +22,23 @@ $blue-color: #2677bb;
 }
 
 .question-tile {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  margin: 10rem 0;
+  padding: 10rem 4rem;
   border: 3px $orange-color solid;
   border-radius: 1rem;
+  .selected {
+    padding-left: 0;
+    padding-right: 0;
+    border-left: 15px $blue-color solid;
+    border-right: 15px $blue-color solid;
+  }
+
+  .unclickable {
+    pointer-events: none;
+  }
 }
+
+
 
 // ######################## Navbar #########################
 .navbar-custom {
