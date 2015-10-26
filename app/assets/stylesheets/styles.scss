@@ -11,7 +11,19 @@ $blue-color: #2677bb;
     color: $white-color;
   }
   .navbar-brand {
-
     color: $white-color;
+  }
+  a.navbar-brand {
+    padding-top: 0px;
+  }
+  .center-navbar{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    color: $white-color;
+    font-size: 1.7em;
+    line-height: 2.2em;
   }
 }

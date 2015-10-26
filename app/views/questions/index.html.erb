@@ -1,1 +1,7 @@
-test words
+<% if @questions.any? %>
+  <% @questions.each do |question| %>
+  <%= image_tag(question.image_one.url(:thumb)) %>
+  <% end %>
+<% else %>
+no images
+<% end %>

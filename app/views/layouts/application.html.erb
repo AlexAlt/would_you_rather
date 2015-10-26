@@ -10,21 +10,27 @@
   <nav class="navbar navbar-default navbar-custom">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">TriMet Troubles</a>
+        <a class="navbar-brand" href="#"><%= image_tag 'trimet.png' %></a>
       </div>
       <div>
         <ul class="nav navbar-nav">
           <li><a href="#">Categories</a></li>
         </ul>
+        <span class="center-navbar">Trimet Troubles</span>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Pose A Questsh</a></li>
+          <li><%= link_to 'Pose A Questsh', new_question_path %></li>
 
         </ul>
       </div>
     </div>
   </nav>
 
-<%= yield %>
+<div class='container'>
+  <%= flash[:notice]%>
+  <%= flash[:alert]%>
+  <%= yield %>
+
+</div>
 
 </body>
 </html>
