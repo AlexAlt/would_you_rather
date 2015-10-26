@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'turbolinks'
 gem 'hirb'
+gem 'paperclip'
 
 
 group :development do

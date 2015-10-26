@@ -1,0 +1,17 @@
+$yellow-color: #c7943e; //orange
+$white-color: #fbfbfb;
+$orange-color: #f67944;
+$blue-color: #2677bb;
+
+
+.navbar-custom {
+  background-color: $blue-color;
+
+  .navbar-nav > li > a {
+    color: $white-color;
+  }
+  .navbar-brand {
+
+    color: $white-color;
+  }
+}
