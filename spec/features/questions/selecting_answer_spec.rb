@@ -11,7 +11,6 @@ describe "Choosing option" do
     question = FactoryGirl.create(:question)
     visit root_path
     find_link('Test Option Two').trigger('click')
-    result = find('span#1-option-two-points')
-    expect(result).to have_content(1)
+    expect(page).to have_content(2)
   end
 end

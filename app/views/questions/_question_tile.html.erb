@@ -1,5 +1,6 @@
 <div class='question-tile'>
   <div class='row'>
+    <h2>Would you rather...?</h2>
     <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12'>
       <%= link_to question_path(question, which: question.option_one), {method: :patch, remote: true, class: "#{question.id}-link" } do %>
         <div class='col-lg-5 col-md-5 col-sm-5 col-xs-5 side-by-side-container'>
