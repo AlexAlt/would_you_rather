@@ -1,3 +1,13 @@
+<% content_for(:navbar) do %>
+  <% if current_user %>
+   <li><%= link_to "Log Out #{current_user.email}", log_out_path %></li>
+   <% else %>
+    <li><%= link_to 'Log In', log_in_path %></li>
+    <li><%= link_to 'Sign Up', new_user_path %></li>
+  <% end %>
+<% end %>
+
+
 <% if @questions.any? %>
   <% @questions.each do |question| %>
     <%= render "question_tile", question: question %>
