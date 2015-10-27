@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
     @questions = Question.all
 
   end
+
   def new
     @question = Question.new
   end
@@ -30,6 +31,7 @@ class QuestionsController < ApplicationController
       @points = @question.points_two
     else
     end
+
     if @question.save
       respond_to do |format|
         format.html {redirect_to questions_path}
@@ -37,8 +39,10 @@ class QuestionsController < ApplicationController
       end
     else
     redirect_to root_path
-
     end
+
+
+
   end
 
   private

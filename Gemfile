@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'hirb'
 gem 'paperclip'
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
+gem 'lazy_high_charts'
 
 
 group :development do

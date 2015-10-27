@@ -14,9 +14,12 @@
         </div>
       <% end %>
       <div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 '>
-        <div class='text-center'>
+        <div class='text-center question-meta' id='<%= question.id %>-question-meta'>
           <h4><span class='glyphicon glyphicon-menu-left'></span> OR
             <span class='glyphicon glyphicon-menu-right'></span></h4>
+
+
+
         </div>
       </div>
       <%= link_to question_path(question, which: question.option_two), method: 'patch', remote: true, class: "#{question.id}-link" do %>

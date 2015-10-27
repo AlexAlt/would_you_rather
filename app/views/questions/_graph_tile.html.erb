@@ -1,0 +1,20 @@
+
+
+<% @chart1 = LazyHighCharts::HighChart.new('graph') do |f|
+  f.chart({:defaultSeriesType=>"pie", :margin=> [50, 0, 0, 0], :height => 150})
+  f.title({:text => "Votes"})
+  f.series({
+    :type => "pie",
+    :name => "2008",
+    :size => "150%",
+    :innerSize => "40%",
+    :startAngle => -90,
+    :endAngle => 90,
+    :data => [{ :name => "#{@question.option_one}", :y => @question.points_one, :color => "#4572A7" },{ :name => "#{@question.option_two}", :y => @question.points_two, :color => "#DB843D" }],
+    :dataLabels=> { :enabled => false }
+  }
+  )
+end %>
+
+
+<%= high_chart("stuff#{@question.id}", @chart1) %>
