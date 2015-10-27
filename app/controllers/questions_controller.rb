@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
       redirect_to root_path
     else
       flash[:notice] = "What are you doing"
-      render :create
+      render :new
     end
   end
 

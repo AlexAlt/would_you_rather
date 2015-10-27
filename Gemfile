@@ -23,6 +23,9 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+  gem 'database_cleaner'
+  gem 'poltergeist'
+  gem 'factory_girl_rails'
 end
 
 group :test do

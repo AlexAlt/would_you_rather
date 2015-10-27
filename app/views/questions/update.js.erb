@@ -1,7 +1,5 @@
 $(function() {
   $('#<%= @question.id %>-option-<%= @option %>-points').text("<%= @points %>");
   $('#<%= @question.id %>-option-<%= @option %>-points').parents('.side-by-side-container').addClass('selected');
-  $(".<%= @question.id %>-link").each(function(){
-    $(this).destroy();
-  });
+  $(".<%= @question.id %>-link").addClass('unclickable');
 });
