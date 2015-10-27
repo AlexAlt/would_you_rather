@@ -20,6 +20,7 @@ class QuestionsController < ApplicationController
 
   def update
     @question = Question.find(params[:id])
+
     if params[:which] == @question.option_one
       @option = 'one'
       @option_string = 'points_one'

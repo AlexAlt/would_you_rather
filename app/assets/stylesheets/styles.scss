@@ -26,11 +26,17 @@ $blue-color: #2677bb;
   padding: 10rem 4rem;
   border: 3px $orange-color solid;
   border-radius: 1rem;
-  .selected {
+  .selected-one {
     padding-left: 0;
     padding-right: 0;
     border-left: 15px $blue-color solid;
     border-right: 15px $blue-color solid;
+  }
+  .selected-two {
+    padding-left: 0;
+    padding-right: 0;
+    border-left: 15px $orange-color solid;
+    border-right: 15px $orange-color solid;
   }
 
   .unclickable {

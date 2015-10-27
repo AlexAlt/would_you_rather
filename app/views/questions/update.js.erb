@@ -1,6 +1,6 @@
 $(function() {
   $('#<%= @question.id %>-option-<%= @option %>-points').text("<%= @points %>");
-  $('#<%= @question.id %>-option-<%= @option %>-points').parents('.side-by-side-container').addClass('selected');
+  $('#<%= @question.id %>-option-<%= @option %>-points').parents('.side-by-side-container').addClass('selected-<%= @option %>');
   $(".<%= @question.id %>-link").addClass('unclickable');
   $('#<%= @question.id %>-question-meta').append('<%= j render ("graph_tile") %>')
 });
